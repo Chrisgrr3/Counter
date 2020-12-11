@@ -14,7 +14,7 @@ public class MainController {
 	public String index(HttpSession session, Model model) {
 		Integer count = (Integer) session.getAttribute("count");
 		if (session.getAttribute("count") == null) {
-			session.setAttribute("count", 1);
+			session.setAttribute("count", 0);
 		} else {
 			count++;
 			session.setAttribute("count", count);
